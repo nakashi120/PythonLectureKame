@@ -7,6 +7,13 @@ class Truck(Car):
         self._max_loadings = max_loadings
         self._loadings = 0
 
+    def gas(self):
+        if self._loadings > self._max_loadings:
+            print("重量オーバーなので走れません")
+            print(f"{self._loadings - self._max_loadings}tの荷物をおろしてください")
+        else:
+            super().gas()
+
     def load(self, weight):
         if weight > 0:
             print(f"{weight}tの荷物を積みました")
@@ -26,7 +33,10 @@ class Truck(Car):
             print(f"最大積載量は{self._max_loadings}tです。重量オーバー")
 
 
-isuzu_truck = Truck("トラックA", 6, "いすゞ", 10)
-isuzu_truck.load(10)
-isuzu_truck.load(100)
+if __name__ == "__main__":
+    isuzu_truck = Truck("トラックA", 6, "いすゞ", 10)
+    isuzu_truck.gas()
+    isuzu_truck.load(10)
+    isuzu_truck.load(100)
+    isuzu_truck.gas()
 
