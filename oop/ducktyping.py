@@ -1,5 +1,19 @@
 class Duck:
+    """
+    This is a class for Duck.
+
+    Attributes:
+        name (str): the name of the duck
+    Methods:
+        walk:
+        quack:
+        fly:
+    """
     def __init__(self, name):
+        """
+        the constructor for Duck class
+        :param name:
+        """
         self.name = name
 
     def walk(self):
