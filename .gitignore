@@ -1,2 +1,3 @@
 # venvのファイルはgit管理しない
 */venv/
+*/.idea/
