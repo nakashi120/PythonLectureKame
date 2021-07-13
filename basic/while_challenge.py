@@ -1,3 +1,4 @@
+# while challenge問題
 age = int(input("何歳ですか？："))
 casino_age = 18
 game_text = """プレイするゲームを選択してください。
@@ -7,7 +8,6 @@ game_text = """プレイするゲームを選択してください。
 """
 
 if age >= casino_age:
-    print("どうぞお入りください。")
     while True:
         game = int(input(game_text))
         if game == 1:
@@ -23,4 +23,4 @@ if age >= casino_age:
             print("正しく選択してください。")
             continue
 else:
-    print("{}歳未満はカジノに入ることができません。".format(casino_age))
+    print(f"{casino_age}歳未満はカジノに入ることができません。")
